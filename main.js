@@ -1,8 +1,6 @@
 let c = document.getElementById("myCanvas");
 let ctx = c.getContext("2d");
 
-//let img = document.createElement("img");
-
 let loadImage = (src, callback) => {
     let img = document.createElement("img");
     img.onload = () => callback(img); 
