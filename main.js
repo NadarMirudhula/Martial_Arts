@@ -21,7 +21,7 @@ let frames = {
 };
 
 let loadImages = (callback) => {
-    let images = {idle: [], kick: [], punch: []};
+    let images = {idle: [], kick: [], punch: [], forward: [], backward: [], block: []};
     let imagesToLoad = 0;
     let anime = ["idle", "kick", "punch", "forward", "backward", "block"];
 
