@@ -8,7 +8,8 @@ let loadImage = (src, callback) => {
 };
 
 let imagePath = (frameNumber, animation) => {
-    return "/" + animation + "/" + frameNumber + ".png";
+    return "https://nadarmirudhula.github.io/Martial_Arts/blob/main/"+ animation + "/" + frameNumber + ".png";
+    //return "/" + animation + "/" + frameNumber + ".png";
 };
 
 let frames = {
