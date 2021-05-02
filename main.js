@@ -24,9 +24,8 @@ let frames = {
 let loadImages = (callback) => {
     let images = {idle: [], kick: [], punch: [], forward: [], backward: [], block: []};
     let imagesToLoad = 0;
-    let anime = ["idle", "kick", "punch", "forward", "backward", "block"];
 
-    anime.forEach((animation) => {
+    ["idle", "kick", "punch", "forward", "backward", "block"].forEach((animation) => {
         let animationFrames = frames[animation];
         imagesToLoad = imagesToLoad + animationFrames.length;
 
@@ -49,8 +48,8 @@ let loadImages = (callback) => {
 let animate = (ctx, images, animation, callback) => {
     images[animation].forEach((image, index) => {
         setTimeout(() => {
-            ctx.clearRect(0, 0, 400, 400);
-            ctx.drawImage(image, 0, 0, 400, 400);
+            ctx.clearRect(0, 0, 500, 500);
+            ctx.drawImage(image, 0, 0, 500, 500);
         }, index * 100);
     });
 
