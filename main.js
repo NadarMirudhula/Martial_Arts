@@ -10,7 +10,7 @@ let loadImage = (src, callback) => {
 };
 
 let imagePath = (frameNumber, animation) => {
-    return "https://github.com/NadarMirudhula/Martial_Arts/tree/main/" + animation + "/" + frameNumber + ".png?raw=true";
+    return animation + "/" + frameNumber + ".png";
 };
 
 let frames = {
