@@ -1,6 +1,8 @@
 let c = document.getElementById("myCanvas");
 let ctx = c.getContext("2d");
 
+//let img = document.createElement("img");
+
 let loadImage = (src, callback) => {
     let img = document.createElement("img");
     img.onload = () => callback(img); 
@@ -8,8 +10,7 @@ let loadImage = (src, callback) => {
 };
 
 let imagePath = (frameNumber, animation) => {
-    return "https://github.com/NadarMirudhula/Martial_Arts/tree/main/"+ animation + "/" + frameNumber + ".png";
-    //return "/" + animation + "/" + frameNumber + ".png";
+    return "https://github.com/NadarMirudhula/Martial_Arts/tree/main/" + animation + "/" + frameNumber + ".png";
 };
 
 let frames = {
@@ -24,8 +25,9 @@ let frames = {
 let loadImages = (callback) => {
     let images = {idle: [], kick: [], punch: [], forward: [], backward: [], block: []};
     let imagesToLoad = 0;
+    let anime = ["idle", "kick", "punch", "forward", "backward", "block"];
 
-    ["idle", "kick", "punch", "forward", "backward", "block"].forEach((animation) => {
+    anime.forEach((animation) => {
         let animationFrames = frames[animation];
         imagesToLoad = imagesToLoad + animationFrames.length;
 
@@ -48,8 +50,8 @@ let loadImages = (callback) => {
 let animate = (ctx, images, animation, callback) => {
     images[animation].forEach((image, index) => {
         setTimeout(() => {
-            ctx.clearRect(0, 0, 500, 500);
-            ctx.drawImage(image, 0, 0, 500, 500);
+            ctx.clearRect(0, 0, 400, 400);
+            ctx.drawImage(image, 0, 0, 400, 400);
         }, index * 100);
     });
 
